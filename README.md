@@ -1,69 +1,109 @@
-# React + TypeScript + Vite
+# 📰 News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+News App is a web application that displays the latest news using an external API. It is built using React + Vite + TypeScript and designed with Tailwind CSS and Ant Design for a modern look. The code structure follows Clean Architecture principles and is equipped with component testing using Vitest.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Display a list of news items from the API
+- Navigate to the news detail page
+- Responsive & modern UI
+- Modular & scalable architecture (Clean Architecture)
+- Unit and component testing
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🏗️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚛️ React + Vite
+- 🟦 TypeScript
+- 🎨 Tailwind CSS
+- 🧱 Ant Design
+- 🧼 Clean Architecture
+- 🧪 Vitest + Testing Library
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Preparation & Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/news-app.git
+cd news-app
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# or
+yarn install
 ```
+
+### 3. Create a `.env` File
+
+Create a `.env` file in the project root and fill it with:
+
+```env
+VITE_NEWS_API_KEY=your_api_key
+VITE_NEWS_API_URL=https://newsapi.org/v2
+```
+
+> You can get your API Key from [https://newsapi.org](https://newsapi.org)
+
+---
+
+## 💻 Running the Application
+
+To run in development mode:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open in a browser: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📦 Build Production
+
+To build the production version:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The results will be available in the `dist/` folder
+
+To preview the results Build:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+---
+
+## 🧪 Testing
+
+This app uses **Vitest** and **@testing-library/react** for testing.
+
+### Run all tests:
+
+```bash
+npm run test
+# or
+yarn test
+```
+---
+
+## 🧑‍💻 Author
+
+- [Alfred](https://github.com/AlfredTakoi) — Frontend Developer

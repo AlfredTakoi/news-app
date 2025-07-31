@@ -1,9 +1,10 @@
 import type { Article } from "../../domain/entities/Article";
 
-const API_KEY = "24c323de5b4646b5bb2b384a2dc6dfb5";
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+const BASE_URL = import.meta.env.VITE_NEWS_BASE_URL;
 
 async function getArticlesFromApi (): Promise<Article[]> {
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`);
+  const response = await fetch(`${BASE_URL}${API_KEY}`);
   const data = await response.json();
   return data.articles || [];
 }
